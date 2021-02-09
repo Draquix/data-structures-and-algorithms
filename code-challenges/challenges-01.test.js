@@ -56,7 +56,7 @@ Write a function named `greeting` that takes in a single string and returns the 
 Then, write a function named `speaker` that takes in an array of strings and a callback function. 
 
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
------------------------------------------------------------------------------------------------- */
+ ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
   return word.toUpperCase+"!";
@@ -65,7 +65,7 @@ const greeting = (word) => {
 const speaker = (words, callback) => {
   const newArray = [];
   words.forEach(value => {
-    newArray.push(greeting(value));
+    newArray.push(callback(value));
   });
   return newArray;
 };
@@ -113,6 +113,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
+  const newList = [];
+  availableItems.forEach(value => {
+    if(value.available === true) {
+      newList.push(value.name)
+    }
+  })
+  return newList;
   // Solution code here...
 };
 
