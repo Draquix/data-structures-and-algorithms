@@ -119,7 +119,15 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  let trigger = false;
+  arr.forEach( value => {
+    if( !/\s\:\)\s/.test(value) ){
+      return false;
+    } else {
+      trigger = true;
+    }
+  })
+  return trigger;
 };
 
 /* ------------------------------------------------------------------------------------------------
