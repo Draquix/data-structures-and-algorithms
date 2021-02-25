@@ -9,12 +9,8 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  let answer = arr.reduce( (max, value) => {
-  return (value > max ? value : max);
-});
-return answer;
-}
-
+  // Solution code here...
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -31,17 +27,7 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
-  const maxArray = [];
-  let neoMatrix = matrix.map(arr => {
-    let thisMax = arr.reduce( (max, value) => {
-      return (value > max ? value : max);
-    });
-    maxArray.push(thisMax);
-  });
-    let answer = maxArray.reduce( (max, val) => {
-      return (val > max ? val : max);
-    })
-    return answer;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,22 +41,25 @@ For example:
   [4, 5, 1],
   [2, 5, 5]
 ]
-let answer = arr.reduce((accumulator, V, I, A) => accumulator + V, 0);
-  return answer;
+
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  const totalArray = [];
-  let newMatrix = matrix.map( arr => {
-    let thisTotal = arr.reduce( (accumulator, value) => accumulator + value, 0);
-    totalArray.push(thisTotal);
-  })
-  let answer = totalArray.reduce( (acc, val) => acc + val, 0);
-  return answer;
+  // Solution code here...
 };
 
 
-/* ------------------------------------------------------------------------------------------------\---------------- */
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 4
+
+You friend Pat has a chain of stores around the greater Seattle area. He specializes in selling salmon cookies. Pat has data for the hourly sales of cookies per hour for each store. He wants to create an array of the total number of cookies sold per hour for all of his stores combined.
+
+Write a function named grandTotal that adds up the cookies sales for each hour of operation for all of the stores combined. For example, the first element in the hourlySales array should be the sum of the cookies sold in the 9:00 a.m. hour at all five stores combined.
+
+For this example, the total at 9:00 a.m. is 17 + 26 + 7 + 5 + 33, or 88 total cookies.
+
+Return the array of the total number of cookies sold per hour for all of the stores combined.
+------------------------------------------------------------------------------------------------ */
 
 const hoursOpen = ['9 a.m.', '10 a.m.', '11 a.m.', '12 p.m.', '1 p.m.', '2 p.m.', '3 p.m.', '4 p.m.', '5 p.m.', '6 p.m.', '7 p.m.', '8 p.m.'];
 
@@ -83,16 +72,9 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  const hourlyTotals = [];
-  for (let i = 0; i < hoursOpen.length; i++){
-    const thisHour = [];
-    stores.forEach( store => {
-      thisHour.push(store[i]);
-    })
-    let hourTotal = thisHour.reduce( (acc,val) => acc+ val,0);
-    hourlyTotals.push(hourTotal);
-  }
-  return hourlyTotals;
+  const totalHour = [];
+  cookieStores.
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -106,16 +88,7 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  const returnArray = [];
-  let count = 0;
-  data.forEach( store => {
-    let objectified = {};
-    objectified.sales = store + ' cookies';
-    objectified.time = hours[count];
-    count++;
-    returnArray.push(objectified);
-  })
-  return returnArray;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -140,15 +113,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  let quantity = 0;
-  arr.forEach( obj => {
-    obj.items.forEach( item => {
-      if (item.name === 'Treats'){
-        quantity += item.quantity;
-      }
-    })
-  })
-  return quantity;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
